@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 20px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Contact Number {background-color: pink;}
+#Social Media {background-color: pink;}
+#Personal Information {background-color: pink;}
+</style>
+</head>
+<body>
+
+<h2><a href="index.html">Home</a></h2>
+
+<button class="tablink" onclick="openPage('Contact Number', this, 'pink')">Contact Number</button>
+<button class="tablink" onclick="openPage('Social Media', this, 'pink')" id="defaultOpen">Social Media</button>
+<button class="tablink" onclick="openPage('Personal Information', this, 'pink')">Personal Information</button>
+
+<div id="Contact Number" class="tabcontent">
+<body background="pastel.jpg" height="100%" width="200%">
+  <h3>Contact Number</h3>
+  <p>SMART 09294058148</p>
+</div>
+
+<div id="Social Media" class="tabcontent">
+<body background="pastel.jpg" height="100%" width="200%">
+  <h3>Social Media</h3>
+  <p>Facebook: cady.longino</p> 
+  <p>Instagram: ktrn.slvdr</p>
+  <p>Twitter: SLVDR.KTRN</p>
+  <p>Gmail: katrinasalvador18@gmail.com</p>  
+</div>
+
+<div id="Personal Information" class="tabcontent">
+<body background="pastel.jpg" height="100%" width="200%">
+  <h3>Personal Information</h3>
+  <p>Name: Katrina Anne Jandoc Salvador</p>
+  <p>Course: Bachelor of Science Information Technology</p>
+  <p>Address: J-11 Policarpio 4th Street San Andres Cainta Rizal</p>
+  <p>Birthday: April 10, 1999</p>
+  <p>Age: 19</p>
+  <p>Gender: Female</p>
+  <br>
+  <p>Mothers Name: Marissa Salvador</p>
+  <p>Occupation: Staff Office</p>
+  <p>Fathers Name: Marcial Salvador</P>
+  <p>Occupation: OFW</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
